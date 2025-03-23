@@ -1,10 +1,32 @@
-function ProductList(desserts) {
+import { MdAddShoppingCart } from "react-icons/md";
+
+function ProductList({ desserts: dessert }) {
   return (
     <div className="desserts">
       <h1 className="desserts-title">Desserts</h1>
-      <div>
-        {desserts.desserts.forEach((dessert) => {
-          console.log(dessert);
+      <div className="dessertGrid">
+        {dessert.map((d) => {
+          const { name, id, price, image: thumbnail, category } = d;
+          return (
+            <div className="dessertCardWrapper" key={id}>
+              <div className="dessertCard">
+                <img
+                  className="dessertCard-img"
+                  src={thumbnail.desktop}
+                  alt="image of product"
+                />
+                <button className="dessertCard-btn">
+                  <MdAddShoppingCart className="icon" />
+                  Add to Cart
+                </button>
+                <div className="dessertCard-body">
+                  <p className="dessertCard-subtitle">{category}</p>
+                  <h4 className="dessertCard-title">{name}</h4>
+                  <p className="dessertCard-price">${price}</p>
+                </div>
+              </div>
+            </div>
+          );
         })}
       </div>
     </div>
