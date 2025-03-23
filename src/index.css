@@ -109,8 +109,80 @@ img {
   gap: 3.2rem;
 }
 
+.dessertGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  gap: 2.4rem;
+}
+
 .desserts-title {
   font-size: var(--font-size-preset-1);
   line-height: var(--line-height-preset-1);
   margin-bottom: 3.2rem;
+}
+
+.dessertCardWrapper {
+  max-width: 250px;
+  width: 100%;
+  height: 347px;
+}
+
+.dessertCard {
+  max-width: 250px;
+  width: 100%;
+  height: 347px;
+}
+
+.dessertCard-img {
+  width: 250px;
+  height: 240px;
+  border-radius: 8px;
+}
+
+.dessertCard-btn {
+  padding: 1.2rem 2.8rem;
+  border: 1px solid black;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: -20px;
+  position: absolute;
+  margin-left: 50px;
+}
+
+.icon {
+  font-size: 18px;
+  color: var(--color-red);
+}
+
+.dessertCard-body {
+  margin-top: 4rem;
+}
+
+.dessertCard-subtitle {
+  font-weight: 400;
+  font-size: var(--font-size-preset-4);
+  line-height: var(--letter-spacing-preset-4);
+  color: var(--color-rose-500);
+  margin-bottom: 8px;
+}
+
+.dessertCard-title {
+  font-weight: 600;
+  font-size: var(--font-size-preset-3);
+  line-height: var(--line-height-preset-3);
+  color: var(--color-rose-900);
+  margin-bottom: 8px;
+}
+
+.dessertCard-price {
+  font-weight: 600;
+  font-size: var(--font-size-preset-3);
+  line-height: var(--font-size-preset-3);
+  color: var(--color-red);
+}
+
+.yourCart {
+  background-color: var(--color-red);
 }
