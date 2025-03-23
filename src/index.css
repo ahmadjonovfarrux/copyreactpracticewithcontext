@@ -155,6 +155,30 @@ img {
   font-size: 18px;
   color: var(--color-red);
 }
+/* Hidden btn */
+.dessertCardHidden-btn {
+  width: 160px;
+  padding: 1.2rem;
+  border: 1px solid black;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: -20px;
+  position: absolute;
+  margin-left: 50px;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  display: none;
+}
+
+.iconMath {
+  font-size: 18px;
+  color: var(--color-white);
+}
+
+/* Active */
 
 .dessertCard-body {
   margin-top: 4rem;
@@ -182,7 +206,54 @@ img {
   line-height: var(--font-size-preset-3);
   color: var(--color-red);
 }
+/* media css */
+@media (max-width: 1030px) {
+  .grid-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    grid-template-columns: 100%;
+    gap: 3.2rem;
+  }
+}
+
+@media (max-width: 820px) {
+  .dessertGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+    gap: 2.4rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .dessertGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* YourCart styles */
 
 .yourCart {
-  background-color: var(--color-red);
+  width: inherit;
+  height: 30rem;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.yourCart-img {
+  width: 336px;
+  height: 195px;
+  margin: 2.4rem;
+}
+
+.yourCart-title {
+  font-weight: 700;
+  margin: 2.4rem;
+  font-size: var(--font-size-preset-2);
+  line-height: var(--line-height-preset-2);
+  color: var(--color-red);
 }
